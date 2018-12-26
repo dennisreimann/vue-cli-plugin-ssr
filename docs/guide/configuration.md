@@ -29,6 +29,8 @@ module.exports = {
         const cookieParser = require('cookie-parser')
         app.use(cookieParser())
       },
+      // Copy URL to system clipboard on start
+      copyUrlOnStart: true,
       // Paths
       distPath: resolve(__dirname, './dist'),
       error500Html: null,
