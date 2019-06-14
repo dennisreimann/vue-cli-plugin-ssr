@@ -11,7 +11,10 @@ module.exports = (api, options) => {
   api.chainWebpack(webpackConfig => {
     // Default entry
     if (!process.env.VUE_CLI_SSR_TARGET) {
-      webpackConfig.entry('app').clear().add(config.entry('client'))
+      Object.keys(webpackConfig.entryPoints.entries()).forEach(id => {
+        const entryPath = webpackConfig.entry(id).values()[0]
+        webpackConfig.entry(id).clear().add(config.entry('client', entryPath))
+      })
     } else {
       const { chainWebpack } = require('./lib/webpack')
       chainWebpack(webpackConfig)

@@ -3,7 +3,7 @@
 Here are the optional settings available in your `vue.config.js` file:
 
 ```js
-const path = require('path')
+const { dirname, resolve } = require('path')
 
 module.exports = {
   pluginOptions: {
@@ -13,7 +13,7 @@ module.exports = {
       // Listening host for `serve` command
       host: null,
       // Entry for each target
-      entry: target => `./src/entry-${target}`,
+      entry: (target, filePath) => resolve(dirname(filePath), `entry-${target}`),
       // Default title
       defaultTitle: 'My app',
       // Path to favicon
@@ -28,10 +28,10 @@ module.exports = {
         app.use(cookieParser())
       },
       // Paths
-      distPath: path.resolve(__dirname, './dist'),
+      distPath: resolve(__dirname, './dist'),
       error500Html: null,
-      templatePath: path.resolve(__dirname, './dist/index.html'),
-      serviceWorkerPath: path.resolve(__dirname, './dist/service-worker.js'),
+      templatePath: resolve(__dirname, './dist/index.html'),
+      serviceWorkerPath: resolve(__dirname, './dist/service-worker.js'),
       // Directives fallback
       directives: {
         // See 'Directive' chapter
