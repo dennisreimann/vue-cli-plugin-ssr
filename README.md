@@ -3,12 +3,16 @@
   <img src="./docs/.vuepress/public/logo.png">
 </p>
 
-# @akryum/vue-cli-plugin-ssr
+# @dennisreimann/vue-cli-plugin-ssr
 
-[![npm](https://img.shields.io/npm/v/@akryum%2Fvue-cli-plugin-ssr.svg) ![npm](https://img.shields.io/npm/dm/@akryum%2Fvue-cli-plugin-ssr.svg)](https://www.npmjs.com/package/@akryum%2Fvue-cli-plugin-ssr)
+[![npm](https://img.shields.io/npm/v/@dennisreimann%2Fvue-cli-plugin-ssr.svg) ![npm](https://img.shields.io/npm/dm/@dennisreimann%2Fvue-cli-plugin-ssr.svg)](https://www.npmjs.com/package/@dennisreimann%2Fvue-cli-plugin-ssr)
 [![vue-cli3](https://img.shields.io/badge/vue--cli-3.x-brightgreen.svg)](https://github.com/vuejs/vue-cli)
 
 Simple Server-Side-Rendering plugin for Vue CLI (Work-in-Progress)
+
+⚠️ Note: This is a fork of `@akryum/ssr`, which should be considered the main package.
+This fork contains some features that aren't merged in the main repository, yet.
+Like support for the Vue-CLI `pages` and `publicPath` options.
 
 <p align="center">
   <a href="https://www.patreon.com/akryum" target="_blank">
@@ -68,6 +72,21 @@ Simple Server-Side-Rendering plugin for Vue CLI (Work-in-Progress)
 - Async routes
 - [vue-cli-plugin-apollo](https://github.com/Akryum/vue-cli-plugin-apollo) support
 - Custom middlewares
+
+This fork of the original package by @Akryum also supports:
+
+- The Vue CLI `pages` and `publicPath` options
+- Hot Module Reloading
+- Additional `options` and `config` arguments for the `extendServer` function
+- Accessing the server bundle and client manifest in the `extendServer` function
+
+(I strive to get these additions merged once they are fully tested.)
+
+The following PRs have also been merged in this fork:
+
+- [#98: Support publicPath in vue.config.js](https://github.com/Akryum/vue-cli-plugin-ssr/pull/98)
+- [#93: Await router before mounting the app](https://github.com/Akryum/vue-cli-plugin-ssr/pull/93)
+- [#75: Fix Type in docs](https://github.com/Akryum/vue-cli-plugin-ssr/pull/75)
 
 <br>
 

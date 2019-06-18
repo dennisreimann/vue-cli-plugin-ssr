@@ -1,4 +1,4 @@
-import { loadAsyncComponents } from '@akryum/vue-cli-plugin-ssr/client'
+import { loadAsyncComponents } from '@dennisreimann/vue-cli-plugin-ssr/client'
 <%_ if (pwa) { _%>
 import './registerServiceWorker'
 <%_ } _%>

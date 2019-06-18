@@ -119,14 +119,14 @@ module.exports = (api, options, rootOptions) => {
           contents = fs.readFileSync(file, { encoding: 'utf8' })
         } else {
           contents = `export default app => {
-            
+
           }`
         }
 
         contents = contents.replace(/export default app => {((.|\s)*)}/, `export default app => {$1
           ssrMiddleware(app, { prodOnly: true })
         }`)
-        contents = `import ssrMiddleware from '@akryum/vue-cli-plugin-ssr/lib/app'\n` + contents
+        contents = `import ssrMiddleware from '@dennisreimann/vue-cli-plugin-ssr/lib/app'\n` + contents
         fs.writeFileSync(file, contents, { encoding: 'utf8' })
       }
 

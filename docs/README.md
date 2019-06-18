@@ -56,6 +56,10 @@ footer: LICENCE MIT - Created by Guillaume CHAU (@Akryum)
 ## Quick Start:
 
 ```bash
-vue add @akryum/ssr
+vue add @dennisreimann/ssr
 yarn run ssr:serve
 ```
+
+Note: This is a fork of `@akryum/ssr`, which should be considered the main package.
+This fork contains some features that aren't merged in the main repository, yet.
+Like support for the Vue-CLI `pages` and `publicPath` options.
