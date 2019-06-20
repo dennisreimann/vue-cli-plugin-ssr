@@ -76,7 +76,6 @@ Like support for the Vue-CLI `pages` and `publicPath` options.
 This fork of the original package by @Akryum also supports:
 
 - The Vue CLI `pages` and `publicPath` options
-- Hot Module Reloading
 - Additional `options` and `config` arguments for the `extendServer` function
 - Accessing the server bundle and client manifest in the `extendServer` function
 
