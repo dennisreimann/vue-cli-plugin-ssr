@@ -16,6 +16,8 @@ module.exports = {
       entry: (target, filePath) => resolve(dirname(filePath), `entry-${target}`),
       // Default title
       defaultTitle: 'My app',
+      // Optional and additional template context, like custom variables
+      templateContext: {},
       // Path to favicon
       favicon: './public/favicon.ico',
       // Skip some requests from being server-side rendered
