@@ -78,6 +78,9 @@ This fork of the original package by @Akryum also supports:
 - The Vue CLI `pages` and `publicPath` options
 - Additional `options` and `config` arguments for the `extendServer` function
 - Accessing the server bundle and client manifest in the `extendServer` function
+- Webpack config export analogous to [Vue CLI](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)
+
+  `const [clientConfig, serverConfig] = require('@dennisreimann/vue-cli-plugin-ssr/webpack.config')`
 
 (I strive to get these additions merged once they are fully tested.)
 
