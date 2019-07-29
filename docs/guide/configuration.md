@@ -30,7 +30,7 @@ module.exports = {
         app.use(cookieParser())
       },
       // Copy URL to system clipboard on start
-      copyUrlOnStart: true,
+      copyUrlOnStart: false,
       // Paths
       distPath: resolve(__dirname, './dist'),
       error500Html: null,
