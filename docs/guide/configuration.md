@@ -29,6 +29,9 @@ module.exports = {
         const cookieParser = require('cookie-parser')
         app.use(cookieParser())
       },
+      // Function to prepend custom middleware (before SSR plugin)
+      prependServer:  (app, options, config) => {
+      },
       // Copy URL to system clipboard on start
       copyUrlOnStart: false,
       // Paths
